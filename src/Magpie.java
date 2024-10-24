@@ -102,6 +102,9 @@
 					String something = statement.substring(startLocation, endLocation);
 					 response = "Why do you" + something + " me?";
 					}
+				else{
+					response = getRandomResponse();
+				}
 					
 				return response; 
 				} 
@@ -117,7 +120,7 @@
 			
 		
 			// Pick a default response to use if nothing else fits
-			private String getRandomResponse() {
+			private String getRandomResponse() {				
 				final int NUMBER_OF_RESPONSES = 10;
 				double r = Math.random();
 				int whichResponse = (int) (r * NUMBER_OF_RESPONSES);
